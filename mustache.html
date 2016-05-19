@@ -2,40 +2,24 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>infinitescroll</title>
+    <title>use mustache template</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/waterfall.css">
 </head>
 <body>
 <div id="header">
-    <h3 style="font-family:sans-serif;margin-left:50px;">沐沐的相册</h3>
+    <h1>use mustache template</h1>
 </div>
-<div class="header-placeholder"></div>
 <div id="container"></div>
-<script type="text/x-handlebars-template" id="waterfall-tpl">
+<script type="text/template" id="waterfall-tpl">
 {{#result}}
     <div class="item">
         <img src="{{image}}" width="{{width}}" height="{{height}}" />
-        <div class="icons">
-            <p class="desc">{{desc}}</p>
-            <a><em class="praise">&nbsp;&nbsp;</em><em>{{praise}}</em></a>
-            <a><em class="pop">&nbsp;&nbsp;</em><em>{{comment}}</em></a>
-        </div>
-        <div class="comment" style="display:none;">
-            <p class="desc">sss</p>
-            <a><em>a</em><em>1111</em></a>
-            <a><em>b</em><em>33</em></a>
-        </div>
-        <div class="bottom">
-            <p>{{time}}</p>
-        </div>
     </div>
 {{/result}}
 </script>
-
-
 <script src="js/libs/jquery/jquery.js"></script>
-<script src="js/libs/handlebars/handlebars.js"></script>
+<script src="js/libs/mustache/mustache.js"></script>
 <script src="js/waterfall.min.js"></script>
 <script>
 $('#container').waterfall({
@@ -46,6 +30,17 @@ $('#container').waterfall({
     checkImagesLoaded: false,
     path: function(page) {
         return 'data/data1.json?page=' + page;
+    },
+    callbacks: {
+        /*
+        * 处理ajax返回数方法
+        * @param {String} data
+        */
+       renderData: function (data) {
+           var template = $('#waterfall-tpl').html();
+           
+           return Mustache.to_html(template, data).replace(/^\s*/mg, '')
+       }
     }
 });
 </script>
