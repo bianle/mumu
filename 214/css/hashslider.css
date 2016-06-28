@@ -1,0 +1,70 @@
+/*// hashslider v0.9 by manuel huegel, copyright 2010
+// mgoys.com*/
+
+
+/*/////////////////////////////////////////////////////*/
+#slider {
+	position: relative;
+	width: 660px; height: 285px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	margin: 75px auto 0 auto;
+	z-index: 10;
+	}
+
+#buttons {
+	position: relative;
+	width: 726px; height: 40px;
+	margin: -100px auto;
+	z-index: 100;
+	}
+
+#right {
+	width: 105px; height: 40px;
+	background-image: url(../img/next_button.png);
+	text-indent: -99999px;
+	float: right;
+	cursor: pointer;
+	}
+	
+#left {
+	width: 105px; height: 40px;
+	background-image: url(../img/back_button.png);
+	text-indent: -99999px;
+	float: left;
+	cursor: pointer;
+	}
+
+	
+#slider ul {
+	position: relative;
+	}
+	
+#slider ul li {
+	float: left;
+	}
+	
+#numbers {
+	height: auto;
+	margin: 35px auto;
+	text-align: center;
+	}	
+	
+
+#numbers li {
+	position: relative;
+	width: 18px; height: 13px;
+	background-image: url(../img/dot_sprite.png);
+	background-repeat: no-repeat;
+	float: left;
+	margin: 0 0px 5px 0;
+	cursor: pointer;
+	text-indent: -99999px;
+	z-index: 100;
+	}
+	
+.activenum {
+	background-position: 0 -13px;
+	}
+	
+/*/////////////////////////////////////////*/

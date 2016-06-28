@@ -1,0 +1,120 @@
+/* CSS Document */
+/* manjographics / famefabrik / compete court */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #404040;
+	padding: 0;
+	}
+
+::selection {
+	background: #404040;
+	}
+::-moz-selection {
+	background: #404040;
+	color: #fff;
+}
+
+
+
+
+
+#content {
+	width: 660px; height: auto;
+	margin: 75px auto;
+	}
+	
+h1 {
+	font-variant: small-caps;
+	font-size: 32px;
+	font-weight: bold;
+	margin: 32px 0 0 0;
+	}
+	
+p {
+	line-height: 1.3em;
+	font-size: 16px;
+	margin: 10px 0 0 0;
+	}
+	
+.code {
+	line-height: 1.3em;
+	font-size: 16px;
+	margin: 10px 0 0 0;
+	color: #999999;
+	}
+	
+.list {
+	list-style: disc;
+	list-style-position: inside;
+	color: #FF99FF;
+	}
+	
+.list li {
+	margin: 7px 0;
+	width: 330px;
+	float: left;
+	}
+	
+.list span {
+	color: #404040;
+	}
+	
+.button {
+	background-color: #404040;
+	color: #fff;
+	letter-spacing: 0.03em;
+	padding: 0 3px;
+	text-decoration: none;
+	font-variant: small-caps;
+	margin: 0 5px;
+	font-weight: bold;
+	}
+	
+.button:hover {
+	background-color: #FF99FF;
+	color: #fff;
+	}
+	
+a, a:active {	color: #FF99FF;	}
+	
+a:hover {	color: #404040; }
+
+#framewrapper {
+	padding: 5px 5px 0 15px;
+	width: 630px; height: auto;
+	background-color: #CCCCCC;
+	margin: auto auto;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	}
+	
+#footer {
+	min-width: 100%; height: auto;
+	padding: 10px;
+	background-color: #404040;
+	position: fixed;
+	top: 0;
+	text-align: right;
+	z-index: 10000;
+	}
+
+#footer a {
+	color: #fff;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	}
+	
+#footer a:hover {
+	text-decoration: line-through;
+	}
+	
+#wrapper {
+	width: 660px;
+	margin: auto auto;
+	}
+	
+#description {
+	background-image: url(../../../../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/img/description.gif);
+	background-repeat: no-repeat;
+	}
